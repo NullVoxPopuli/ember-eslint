@@ -1,13 +1,33 @@
 {
   "name": "ember-eslint",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The all in one ESLint configuration for ember projects",
   "main": "src/index.js",
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["ember-addon", "ember", "eslint"],
-  "license": "MIT"
+  "keywords": [
+    "ember-addon",
+    "ember",
+    "eslint"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@babel/eslint-parser": "^7.26.5",
+    "@eslint/js": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-ember": "^12.5.0",
+    "eslint-plugin-qunit": "^8.1.2",
+    "typescript-eslint": "^8.23.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.19.0",
+    "eslint-plugin-n": "^17.15.1",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2"
+  }
 }

@@ -1,3 +1,8 @@
-export { official, official as recommended } from './official.js';
+import { official } from './official.js';
 
 // export { stylistic } from './stylistic.js';
+//
+export const ember = {
+  official,
+  recommended: official,
+};
