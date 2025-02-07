@@ -1,0 +1,13 @@
+{
+  "name": "ember-eslint",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "The all in one ESLint configuration for ember projects",
+  "main": "src/index.js",
+  "files": ["src"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["ember-addon", "ember", "eslint"],
+  "license": "MIT"
+}
