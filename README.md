@@ -4,8 +4,15 @@ The easiest way to get linting going in in your ember project
 
 ## Setup
 
+install from npm:
 ```bash
 npm add ember-eslint eslint
+```
+or, from source (by editing your package.json):
+```js
+"devDependencies": {
+  "ember-eslint": "github:NullVoxPopuli/ember-eslint"
+}
 ```
 
 In `eslint.config.mjs`,
