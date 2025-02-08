@@ -1,0 +1,21 @@
+{
+  "solution": {
+    "ember-eslint": {
+      "impact": "patch",
+      "oldVersion": "0.0.1",
+      "newVersion": "0.0.2",
+      "constraints": [
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
+        }
+      ],
+      "pkgJSONPath": "./package.json"
+    }
+  },
+  "description": "## Release (2025-02-08)\n\nember-eslint 0.0.2 (patch)\n\n#### :bug: Bug Fix\n* `ember-eslint`\n  * [#4](https://github.com/NullVoxPopuli/ember-eslint/pull/4) Remove `ember-addon` keyword ([@evoactivity](https://github.com/evoactivity))\n  * [#3](https://github.com/NullVoxPopuli/ember-eslint/pull/3) Move globals to deps ([@evoactivity](https://github.com/evoactivity))\n  * [#2](https://github.com/NullVoxPopuli/ember-eslint/pull/2) move eslint-plugin-n to deps ([@evoactivity](https://github.com/evoactivity))\n\n#### :house: Internal\n* `ember-eslint`\n  * [#6](https://github.com/NullVoxPopuli/ember-eslint/pull/6) Setup release-plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 2\n- Liam Potter ([@evoactivity](https://github.com/evoactivity))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+}
