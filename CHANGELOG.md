@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-02-14)
+
+ember-eslint 0.1.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-eslint`
+  * [#8](https://github.com/NullVoxPopuli/ember-eslint/pull/8) Support type=module apps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-02-08)
 
 ember-eslint 0.0.2 (patch)
