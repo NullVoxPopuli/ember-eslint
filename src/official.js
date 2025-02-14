@@ -8,7 +8,7 @@ import ember from 'eslint-plugin-ember/recommended';
 import prettier from 'eslint-config-prettier';
 import qunit from 'eslint-plugin-qunit';
 import n from 'eslint-plugin-n';
-import { hasTypescript } from './utils.js';
+import { hasTypescript, hasTypeModule } from './utils.js';
 
 import babelParser from '@babel/eslint-parser';
 
@@ -18,6 +18,7 @@ import babelParser from '@babel/eslint-parser';
 export function official(root) {
   let hasTS = hasTypescript(root);
   let esm = parserOptions.esm(root);
+  let isTypeModule = hasTypeModule(root);
 
   return ts.config([
     js.configs.recommended,
@@ -84,13 +85,25 @@ export function official(root) {
     {
       files: [
         '**/*.cjs',
-        'config/**/*.js',
-        'testem.js',
-        'testem*.js',
-        '.prettierrc.js',
-        '.stylelintrc.js',
-        '.template-lintrc.js',
-        'ember-cli-build.js',
+        ...(isTypeModule
+          ? [
+              'config/**/*.cjs',
+              'testem.cjs',
+              'testem*.cjs',
+              '.prettierrc.cjs',
+              '.stylelintrc.cjs',
+              '.template-lintrc.cjs',
+              'ember-cli-build.cjs',
+            ]
+          : [
+              'config/**/*.js',
+              'testem.js',
+              'testem*.js',
+              '.prettierrc.js',
+              '.stylelintrc.js',
+              '.template-lintrc.js',
+              'ember-cli-build.js',
+            ]),
       ],
       plugins: {
         n,
@@ -106,9 +119,10 @@ export function official(root) {
     },
     /**
      * ESM node files
+     * NOTE: the app/src directory is browser-land (typically)
      */
     {
-      files: ['**/*.mjs'],
+      files: ['**/*.mjs', 'config/**/*', '.template-lintrc.js', '*.js'],
       plugins: {
         n,
       },
