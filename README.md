@@ -51,6 +51,14 @@ export default [
 ];
 ```
 
+#### Support Matrix
+
+This config supports a 2x2x2 matrix of features:
+
+- TypeScript vs JavaScript
+- App vs Addon
+- `type=module` packages and classic packages 
+
 ## Debugging ESLint
 
 Docs: https://eslint.org/docs/latest/use/configure/debug
