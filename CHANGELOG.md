@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-02-21)
+
+ember-eslint 0.1.1 (patch)
+
+#### :bug: Bug Fix
+* `ember-eslint`
+  * [#10](https://github.com/NullVoxPopuli/ember-eslint/pull/10) Filter out empty / null configs ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-02-14)
 
 ember-eslint 0.1.0 (minor)
