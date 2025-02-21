@@ -20,121 +20,127 @@ export function official(root) {
   let esm = parserOptions.esm(root);
   let isTypeModule = hasTypeModule(root);
 
-  return ts.config([
-    js.configs.recommended,
-    ember.configs.base,
-    ember.configs.gjs,
-    ember.configs.gts,
-    prettier,
-    /**
-     * Ignores must be in their own object
-     * https://eslint.org/docs/latest/use/configure/ignore
-     */
-    {
-      ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
-    },
-    /**
-     * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
-     */
-    {
-      linterOptions: {
-        reportUnusedDisableDirectives: 'error',
+  return ts.config(
+    [
+      js.configs.recommended,
+      ember.configs.base,
+      ember.configs.gjs,
+      ember.configs.gts,
+      prettier,
+      /**
+       * Ignores must be in their own object
+       * https://eslint.org/docs/latest/use/configure/ignore
+       */
+      {
+        ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
       },
-    },
-    {
-      files: ['**/*.js'],
-      languageOptions: {
-        parser: babelParser,
-      },
-    },
-    {
-      files: ['**/*.{js,gjs}'],
-      languageOptions: {
-        parserOptions: esm.js,
-        globals: {
-          ...globals.browser,
+      /**
+       * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
+       */
+      {
+        linterOptions: {
+          reportUnusedDisableDirectives: 'error',
         },
       },
-    },
-    hasTS
-      ? {
-          files: ['**/*.{ts,gts}'],
-          languageOptions: {
-            parser: ember.parser,
-            parserOptions: esm.ts,
-          },
-          extends: [...ts.configs.recommendedTypeChecked, ember.configs.gts],
-        }
-      : {},
-    hasTS
-      ? {
-          files: ['tests/**/*-test.{js,gjs,ts,gts}'],
-          plugins: {
-            qunit,
-          },
-        }
-      : {
-          files: ['tests/**/*-test.{js,gjs}'],
-          plugins: {
-            qunit,
+      {
+        files: ['**/*.js'],
+        languageOptions: {
+          parser: babelParser,
+        },
+      },
+      {
+        files: ['**/*.{js,gjs}'],
+        languageOptions: {
+          parserOptions: esm.js,
+          globals: {
+            ...globals.browser,
           },
         },
-    /**
-     * CJS node files
-     */
-    {
-      files: [
-        '**/*.cjs',
-        ...(isTypeModule
-          ? [
-              'config/**/*.cjs',
-              'testem.cjs',
-              'testem*.cjs',
-              '.prettierrc.cjs',
-              '.stylelintrc.cjs',
-              '.template-lintrc.cjs',
-              'ember-cli-build.cjs',
-            ]
-          : [
-              'config/**/*.js',
-              'testem.js',
-              'testem*.js',
-              '.prettierrc.js',
-              '.stylelintrc.js',
-              '.template-lintrc.js',
-              'ember-cli-build.js',
-            ]),
-      ],
-      plugins: {
-        n,
       },
+      hasTS
+        ? {
+            files: ['**/*.{ts,gts}'],
+            languageOptions: {
+              parser: ember.parser,
+              parserOptions: esm.ts,
+            },
+            extends: [...ts.configs.recommendedTypeChecked, ember.configs.gts],
+          }
+        : null,
+      hasTS
+        ? {
+            files: ['tests/**/*-test.{js,gjs,ts,gts}'],
+            plugins: {
+              qunit,
+            },
+          }
+        : {
+            files: ['tests/**/*-test.{js,gjs}'],
+            plugins: {
+              qunit,
+            },
+          },
+      /**
+       * CJS node files
+       */
+      {
+        files: [
+          '**/*.cjs',
+          ...(isTypeModule
+            ? [
+                'config/**/*.cjs',
+                'testem.cjs',
+                'testem*.cjs',
+                '.prettierrc.cjs',
+                '.stylelintrc.cjs',
+                '.template-lintrc.cjs',
+                'ember-cli-build.cjs',
+              ]
+            : [
+                'config/**/*.js',
+                'testem.js',
+                'testem*.js',
+                '.prettierrc.js',
+                '.stylelintrc.js',
+                '.template-lintrc.js',
+                'ember-cli-build.js',
+              ]),
+        ],
+        plugins: {
+          n,
+        },
 
-      languageOptions: {
-        sourceType: 'script',
-        ecmaVersion: 'latest',
-        globals: {
-          ...globals.node,
+        languageOptions: {
+          sourceType: 'script',
+          ecmaVersion: 'latest',
+          globals: {
+            ...globals.node,
+          },
         },
       },
-    },
-    /**
-     * ESM node files
-     * NOTE: the app/src directory is browser-land (typically)
-     */
-    {
-      files: ['**/*.mjs', 'config/**/*', '.template-lintrc.js', '*.js'],
-      plugins: {
-        n,
-      },
+      /**
+       * ESM node files
+       * NOTE: the app/src directory is browser-land (typically)
+       */
+      {
+        files: ['**/*.mjs', 'config/**/*', '.template-lintrc.js', '*.js'],
+        plugins: {
+          n,
+        },
 
-      languageOptions: {
-        sourceType: 'module',
-        ecmaVersion: 'latest',
-        parserOptions: esm.js,
-        globals: {
-          ...globals.node,
+        languageOptions: {
+          sourceType: 'module',
+          ecmaVersion: 'latest',
+          parserOptions: esm.js,
+          globals: {
+            ...globals.node,
+          },
         },
       },
-    },
-  ]);
+      /**
+       * Since this config is dynamically created, we create null entries when a situation doesn't apply.
+       * For example, we use `null` in the place where the TypeScript configs would go if a consumer isn't using TypeScript.
+       */
+    ].filter(Boolean)
+  );
 }
