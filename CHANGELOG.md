@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+
+
 ## Release (2025-02-21)
 
 ember-eslint 0.1.2 (patch)
