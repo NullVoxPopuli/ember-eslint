@@ -1,17 +1,17 @@
 {
   "solution": {
     "ember-eslint": {
-      "impact": "minor",
-      "oldVersion": "0.0.2",
-      "newVersion": "0.1.0",
+      "impact": "patch",
+      "oldVersion": "0.1.0",
+      "newVersion": "0.1.1",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-02-14)\n\nember-eslint 0.1.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-eslint`\n  * [#8](https://github.com/NullVoxPopuli/ember-eslint/pull/8) Support type=module apps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-02-21)\n\nember-eslint 0.1.1 (patch)\n\n#### :bug: Bug Fix\n* `ember-eslint`\n  * [#10](https://github.com/NullVoxPopuli/ember-eslint/pull/10) Filter out empty / null configs ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
