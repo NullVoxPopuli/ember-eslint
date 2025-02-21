@@ -2,6 +2,21 @@
 
 ## Release (2025-02-21)
 
+ember-eslint 0.1.2 (patch)
+
+#### :bug: Bug Fix
+* `ember-eslint`
+  * [#14](https://github.com/NullVoxPopuli/ember-eslint/pull/14) Add tests/dummy/config to CJS file list ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `ember-eslint`
+  * [#12](https://github.com/NullVoxPopuli/ember-eslint/pull/12) Add tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2025-02-21)
+
 ember-eslint 0.1.1 (patch)
 
 #### :bug: Bug Fix
