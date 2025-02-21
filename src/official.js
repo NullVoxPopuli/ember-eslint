@@ -98,6 +98,7 @@ export function official(root) {
               ]
             : [
                 'config/**/*.js',
+                'tests/dummy/config/**/*.js',
                 'testem.js',
                 'testem*.js',
                 '.prettierrc.js',
