@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+
+concurrency:
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: 'Test ${{ matrix.dir }}'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        dir:
+          - "tests/minimal"
+
+    steps:
+      - uses: wyvox/action@v1
+      - run: pnpm eslint --fix .
+        working-directory: ${{ matrix.dir }}
+      - run: pnpm eslint  .
+        working-directory: ${{ matrix.dir }}
+      - uses: wyvox/action-no-git-diff@v1
+
