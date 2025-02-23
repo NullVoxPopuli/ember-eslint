@@ -1,21 +1,17 @@
 {
   "solution": {
     "ember-eslint": {
-      "impact": "patch",
-      "oldVersion": "0.1.1",
-      "newVersion": "0.1.2",
+      "impact": "minor",
+      "oldVersion": "0.1.2",
+      "newVersion": "0.2.0",
       "constraints": [
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        },
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-02-21)\n\nember-eslint 0.1.2 (patch)\n\n#### :bug: Bug Fix\n* `ember-eslint`\n  * [#14](https://github.com/NullVoxPopuli/ember-eslint/pull/14) Add tests/dummy/config to CJS file list ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `ember-eslint`\n  * [#12](https://github.com/NullVoxPopuli/ember-eslint/pull/12) Add tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-02-23)\n\nember-eslint 0.2.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-eslint`\n  * [#16](https://github.com/NullVoxPopuli/ember-eslint/pull/16) Export utilities for building your own composable configs ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
