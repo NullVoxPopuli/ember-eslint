@@ -59,6 +59,13 @@ This config supports a 2x2x2 matrix of features:
 - App vs Addon
 - `type=module` packages and classic packages 
 
+## Exported utilities
+
+- `utils.hasBabelConfig` - returns true when the host environment has a babel config 
+- `utils.hasTypescript` - returns true when the host environment has typescript
+- `utils.hasTypeModule` - returns true when the host environment has `type=module` in the package.json
+- `parsers.esm` - the parser options for JS (babel) and TS ESM files
+
 ## Debugging ESLint
 
 Docs: https://eslint.org/docs/latest/use/configure/debug
