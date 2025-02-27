@@ -32,7 +32,13 @@ export function official(root) {
        * https://eslint.org/docs/latest/use/configure/ignore
        */
       {
-        ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
+        ignores: [
+          'dist/',
+          'declarations/',
+          'node_modules/',
+          'coverage/',
+          '!**/.*',
+        ],
       },
       /**
        * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
