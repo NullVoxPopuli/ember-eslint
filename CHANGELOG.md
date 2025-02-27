@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-02-27)
+
+ember-eslint 0.2.1 (patch)
+
+#### :bug: Bug Fix
+* `ember-eslint`
+  * [#18](https://github.com/NullVoxPopuli/ember-eslint/pull/18) Add declarations to ignores ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-02-23)
 
 ember-eslint 0.2.0 (minor)

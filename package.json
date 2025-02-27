@@ -1,6 +1,6 @@
 {
   "name": "ember-eslint",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The all in one ESLint configuration for ember projects",
   "keywords": [
     "ember",
