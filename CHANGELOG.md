@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-06-30)
+
+ember-eslint 0.3.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-eslint`
+  * [#19](https://github.com/NullVoxPopuli/ember-eslint/pull/19) Support mjs babel configs ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-02-27)
 
 ember-eslint 0.2.1 (patch)
