@@ -1,8 +1,16 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
+const babelConfigCandidates = [
+  'babel.config.cjs',
+  'babel.config.mjs',
+  'babel.config.js',
+];
+
 export function hasBabelConfig(root) {
-  return existsSync(join(root, 'babel.config.cjs'));
+  return babelConfigCandidates.some((candidate) => {
+    return existsSync(join(root, candidate));
+  });
 }
 
 export function hasTypescript(root) {
