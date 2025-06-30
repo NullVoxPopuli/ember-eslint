@@ -34,9 +34,12 @@ export function official(root) {
       {
         ignores: [
           'dist/',
+          'dist-*/',
           'declarations/',
           'node_modules/',
           'coverage/',
+          'vendor/',
+          'tmp/',
           '!**/.*',
         ],
       },
@@ -93,15 +96,8 @@ export function official(root) {
         files: [
           '**/*.cjs',
           ...(isTypeModule
-            ? [
-                'config/**/*.cjs',
-                'testem.cjs',
-                'testem*.cjs',
-                '.prettierrc.cjs',
-                '.stylelintrc.cjs',
-                '.template-lintrc.cjs',
-                'ember-cli-build.cjs',
-              ]
+            ? // when type=module, cjs files must have .cjs extensions
+              []
             : [
                 'config/**/*.js',
                 'tests/dummy/config/**/*.js',
