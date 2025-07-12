@@ -32,6 +32,7 @@ export function official(root) {
        * https://eslint.org/docs/latest/use/configure/ignore
        */
       {
+        name: 'ember-eslint:ignores',
         ignores: [
           'dist/',
           'dist-*/',
@@ -47,17 +48,20 @@ export function official(root) {
        * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
        */
       {
+        name: 'ember-eslint:linter-options',
         linterOptions: {
           reportUnusedDisableDirectives: 'error',
         },
       },
       {
+        name: 'ember-eslint:js',
         files: ['**/*.js'],
         languageOptions: {
           parser: babelParser,
         },
       },
       {
+        name: 'ember-eslint:js-and-gjs',
         files: ['**/*.{js,gjs}'],
         languageOptions: {
           parserOptions: esm.js,
@@ -69,6 +73,7 @@ export function official(root) {
 
       hasTS
         ? {
+            name: 'ember-eslint:ts-and-gts',
             files: ['**/*.{ts,gts}'],
             languageOptions: {
               parser: ember.parser,
@@ -79,12 +84,14 @@ export function official(root) {
         : null,
       hasTS
         ? {
+            name: 'ember-eslint:tests/qunit',
             files: ['tests/**/*-test.{js,gjs,ts,gts}'],
             plugins: {
               qunit,
             },
           }
         : {
+            name: 'ember-eslint:tests/qunit',
             files: ['tests/**/*-test.{js,gjs}'],
             plugins: {
               qunit,
@@ -92,6 +99,7 @@ export function official(root) {
           },
 
       {
+        name: 'ember-eslint:globals/js-gjs',
         files: ['**/*.{js,gjs}'],
         languageOptions: {
           globals: {
@@ -101,6 +109,7 @@ export function official(root) {
       },
       hasTS
         ? {
+            name: 'ember-eslint:globals/ts-gts',
             files: ['**/*.{ts,gts}'],
             languageOptions: {
               globals: {
@@ -114,6 +123,7 @@ export function official(root) {
        * CJS node files
        */
       {
+        name: 'ember-eslint:node/cjs',
         files: [
           '**/*.cjs',
           ...(isTypeModule
@@ -147,6 +157,7 @@ export function official(root) {
        * NOTE: the app/src directory is browser-land (typically)
        */
       {
+        name: 'ember-eslint:node/esm',
         files: ['**/*.mjs', 'config/**/*', '.template-lintrc.js', '*.js'],
         plugins: {
           n,
