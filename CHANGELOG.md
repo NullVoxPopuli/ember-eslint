@@ -1,5 +1,25 @@
 # Changelog
 
+## Release (2025-07-12)
+
+* ember-eslint 0.4.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-eslint`
+  * [#24](https://github.com/NullVoxPopuli/ember-eslint/pull/24) Update deps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#21](https://github.com/NullVoxPopuli/ember-eslint/pull/21) Update ignores ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `ember-eslint`
+  * [#23](https://github.com/NullVoxPopuli/ember-eslint/pull/23) globals tweaks ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `ember-eslint`
+  * [#25](https://github.com/NullVoxPopuli/ember-eslint/pull/25) Update release-plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-06-30)
 
 ember-eslint 0.3.0 (minor)

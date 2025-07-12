@@ -2,16 +2,25 @@
   "solution": {
     "ember-eslint": {
       "impact": "minor",
-      "oldVersion": "0.2.1",
-      "newVersion": "0.3.0",
+      "oldVersion": "0.3.0",
+      "newVersion": "0.4.0",
+      "tagName": "latest",
       "constraints": [
         {
           "impact": "minor",
           "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-06-30)\n\nember-eslint 0.3.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-eslint`\n  * [#19](https://github.com/NullVoxPopuli/ember-eslint/pull/19) Support mjs babel configs ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-07-12)\n\n* ember-eslint 0.4.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-eslint`\n  * [#24](https://github.com/NullVoxPopuli/ember-eslint/pull/24) Update deps ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#21](https://github.com/NullVoxPopuli/ember-eslint/pull/21) Update ignores ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `ember-eslint`\n  * [#23](https://github.com/NullVoxPopuli/ember-eslint/pull/23) globals tweaks ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `ember-eslint`\n  * [#25](https://github.com/NullVoxPopuli/ember-eslint/pull/25) Update release-plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
