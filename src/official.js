@@ -66,6 +66,7 @@ export function official(root) {
           },
         },
       },
+
       hasTS
         ? {
             files: ['**/*.{ts,gts}'],
@@ -89,6 +90,26 @@ export function official(root) {
               qunit,
             },
           },
+
+      {
+        files: ['**/*.{js,gjs}'],
+        languageOptions: {
+          globals: {
+            ...globals.browser,
+          },
+        },
+      },
+      hasTS
+        ? {
+            files: ['**/*.{ts,gts}'],
+            languageOptions: {
+              globals: {
+                ...globals.browser,
+              },
+            },
+          }
+        : null,
+
       /**
        * CJS node files
        */
