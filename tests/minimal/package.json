@@ -8,5 +8,8 @@
     "decorator-transforms": "^2.3.0",
     "ember-eslint": "workspace:*",
     "eslint": "^9.31.0"
+  },
+  "engines": {
+    "node": "^20.11.0 || >= 22"
   }
 }

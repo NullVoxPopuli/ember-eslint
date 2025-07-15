@@ -22,11 +22,17 @@ export function official(root) {
 
   return ts.config(
     [
-      js.configs.recommended,
+      {
+        name: '@eslint/js:recommended',
+        ...js.configs.recommended,
+      },
       ember.configs.base,
       ember.configs.gjs,
       ember.configs.gts,
-      prettier,
+      {
+        name: 'prettier:disable-conflicting',
+        ...prettier,
+      },
       /**
        * Ignores must be in their own object
        * https://eslint.org/docs/latest/use/configure/ignore
@@ -54,34 +60,84 @@ export function official(root) {
         },
       },
       {
-        name: 'ember-eslint:js',
+        name: 'ember-eslint:(js)/parser',
         files: ['**/*.js'],
         languageOptions: {
           parser: babelParser,
         },
       },
       {
-        name: 'ember-eslint:js-and-gjs',
+        name: 'ember-eslint:(js, gjs)/parser-options',
         files: ['**/*.{js,gjs}'],
         languageOptions: {
           parserOptions: esm.js,
+        },
+      },
+      ...[
+        hasTS
+          ? /**
+             * Not using "extends" behavior here from ts-eslint because it formats weird in the inspecter
+             */
+            (() => {
+              let base = {
+                ...ember.configs.gts,
+                name: 'ember-eslint:(ts, gts)',
+                files: ['**/*.{ts,gts}'],
+                languageOptions: {
+                  parser: ember.parser,
+                  parserOptions: esm.ts,
+                },
+              };
+
+              return [
+                ts.configs.recommendedTypeChecked.map((x) => {
+                  x.files = base.files;
+                  x.name = x.name
+                    ? `${base.name}:${x.name}`
+                    : `${base.name}:unknown`;
+
+                  x.languageOptions ||= {};
+                  x.languageOptions.parser = base.languageOptions.parser;
+                  x.languageOptions.parserOptions ||= {};
+                  x.languageOptions.globals ||= {};
+                  Object.assign(
+                    x.languageOptions.parserOptions,
+                    base.languageOptions.parserOptions
+                  );
+                  Object.assign(
+                    x.languageOptions.globals,
+                    base.languageOptions.globals
+                  );
+
+                  return x;
+                }),
+                base,
+              ];
+            })()
+          : null,
+      ].flat(),
+
+      {
+        name: 'ember-eslint:(js, gjs)/globals',
+        files: ['**/*.{js,gjs}'],
+        languageOptions: {
           globals: {
             ...globals.browser,
           },
         },
       },
-
       hasTS
         ? {
-            name: 'ember-eslint:ts-and-gts',
+            name: 'ember-eslint:(ts, gts)/globals',
             files: ['**/*.{ts,gts}'],
             languageOptions: {
-              parser: ember.parser,
-              parserOptions: esm.ts,
+              globals: {
+                ...globals.browser,
+              },
             },
-            extends: [...ts.configs.recommendedTypeChecked, ember.configs.gts],
           }
         : null,
+
       hasTS
         ? {
             ...qunit.configs.recommended,
@@ -99,27 +155,6 @@ export function official(root) {
               qunit,
             },
           },
-
-      {
-        name: 'ember-eslint:globals/js-gjs',
-        files: ['**/*.{js,gjs}'],
-        languageOptions: {
-          globals: {
-            ...globals.browser,
-          },
-        },
-      },
-      hasTS
-        ? {
-            name: 'ember-eslint:globals/ts-gts',
-            files: ['**/*.{ts,gts}'],
-            languageOptions: {
-              globals: {
-                ...globals.browser,
-              },
-            },
-          }
-        : null,
 
       /**
        * CJS node files
