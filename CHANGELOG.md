@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-07-15)
+
+* ember-eslint 0.5.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-eslint`
+  * [#26](https://github.com/NullVoxPopuli/ember-eslint/pull/26) Add upstream configs from ember-cli ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-07-12)
 
 * ember-eslint 0.4.0 (minor)
