@@ -84,6 +84,7 @@ export function official(root) {
         : null,
       hasTS
         ? {
+            ...qunit.configs.recommended,
             name: 'ember-eslint:tests/qunit',
             files: ['tests/**/*-test.{js,gjs,ts,gts}'],
             plugins: {
@@ -91,6 +92,7 @@ export function official(root) {
             },
           }
         : {
+            ...qunit.configs.recommended,
             name: 'ember-eslint:tests/qunit',
             files: ['tests/**/*-test.{js,gjs}'],
             plugins: {
@@ -123,6 +125,7 @@ export function official(root) {
        * CJS node files
        */
       {
+        ...n.configs['flat/recommended-script'],
         name: 'ember-eslint:node/cjs',
         files: [
           '**/*.cjs',
@@ -157,6 +160,7 @@ export function official(root) {
        * NOTE: the app/src directory is browser-land (typically)
        */
       {
+        ...n.configs['flat/recommended-module'],
         name: 'ember-eslint:node/esm',
         files: ['**/*.mjs', 'config/**/*', '.template-lintrc.js', '*.js'],
         plugins: {
