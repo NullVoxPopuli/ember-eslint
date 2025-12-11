@@ -10,7 +10,8 @@ import qunit from 'eslint-plugin-qunit';
 import n from 'eslint-plugin-n';
 import { hasTypescript, hasTypeModule } from './utils.js';
 
-import babelParser from '@babel/eslint-parser';
+
+import babelParser from '@babel/eslint-parser/experimental-worker';
 
 /**
  * @param {string} root the directory of the eslint config file. can be import.meta.dirname
@@ -71,6 +72,9 @@ export function official(root) {
         files: ['**/*.{js,gjs}'],
         languageOptions: {
           parserOptions: esm.js,
+          globals: {
+            ...globals.browser,
+          },
         },
       },
       ...[
