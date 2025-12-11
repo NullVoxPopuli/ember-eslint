@@ -2,8 +2,8 @@
   "solution": {
     "ember-eslint": {
       "impact": "minor",
-      "oldVersion": "0.4.0",
-      "newVersion": "0.5.0",
+      "oldVersion": "0.5.0",
+      "newVersion": "0.6.0",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-07-15)\n\n* ember-eslint 0.5.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-eslint`\n  * [#26](https://github.com/NullVoxPopuli/ember-eslint/pull/26) Add upstream configs from ember-cli ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-12-11)\n\n* ember-eslint 0.6.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-eslint`\n  * [#30](https://github.com/NullVoxPopuli/ember-eslint/pull/30) Update deps and sync with blueprint ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#28](https://github.com/NullVoxPopuli/ember-eslint/pull/28) Add names to all configs, even ones not provided by us ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }

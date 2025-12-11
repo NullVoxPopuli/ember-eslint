@@ -1,5 +1,17 @@
 # Changelog
 
+## Release (2025-12-11)
+
+* ember-eslint 0.6.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-eslint`
+  * [#30](https://github.com/NullVoxPopuli/ember-eslint/pull/30) Update deps and sync with blueprint ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#28](https://github.com/NullVoxPopuli/ember-eslint/pull/28) Add names to all configs, even ones not provided by us ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-07-15)
 
 * ember-eslint 0.5.0 (minor)
