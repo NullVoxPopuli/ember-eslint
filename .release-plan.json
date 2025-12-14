@@ -2,8 +2,8 @@
   "solution": {
     "ember-eslint": {
       "impact": "patch",
-      "oldVersion": "0.6.0",
-      "newVersion": "0.6.1",
+      "oldVersion": "0.6.1",
+      "newVersion": "0.6.2",
       "tagName": "latest",
       "constraints": [
         {
@@ -14,5 +14,5 @@
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-12-14)\n\n* ember-eslint 0.6.1 (patch)\n\n#### :bug: Bug Fix\n* `ember-eslint`\n  * [#31](https://github.com/NullVoxPopuli/ember-eslint/pull/31) Fix mjs and node version ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-12-14)\n\n* ember-eslint 0.6.2 (patch)\n\n#### :bug: Bug Fix\n* `ember-eslint`\n  * [#33](https://github.com/NullVoxPopuli/ember-eslint/pull/33) Be more specific about type=module node behavior ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
