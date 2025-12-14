@@ -198,7 +198,7 @@ export function official(root) {
           'node/no-unsupported-features': [
             'error',
             {
-              version: '24',
+              version: process.version,
               ignores: [],
             },
           ],
@@ -235,7 +235,7 @@ export function official(root) {
           'node/no-unsupported-features': [
             'error',
             {
-              version: '24',
+              version: process.version,
               ignores: [],
             },
           ],
