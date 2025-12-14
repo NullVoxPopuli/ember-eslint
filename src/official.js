@@ -214,9 +214,18 @@ export function official(root) {
         files: [
           '**/*.mjs',
           'config/**/*',
-          '.template-lintrc.js',
+          'config/**/*.mjs',
           '*.js',
           '*.mjs',
+          ...(isTypeModule
+            ? [
+                'config/**/*.js',
+                '.template-lintrc.js',
+                '.prettierrc.js',
+                'eslint.config.js',
+                'vite.config.js',
+              ]
+            : []),
         ],
         plugins: {
           n,
