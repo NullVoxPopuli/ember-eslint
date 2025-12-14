@@ -195,7 +195,7 @@ export function official(root) {
 
         rules: {
           ...n.configs['flat/recommended-script'].rules,
-          'node/no-unsupported-features': [
+          'n/no-unsupported-features': [
             'error',
             {
               version: process.version,
@@ -232,7 +232,7 @@ export function official(root) {
         },
         rules: {
           ...n.configs['flat/recommended-module'].rules,
-          'node/no-unsupported-features': [
+          'n/no-unsupported-features': [
             'error',
             {
               version: process.version,
