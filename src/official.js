@@ -10,7 +10,6 @@ import qunit from 'eslint-plugin-qunit';
 import n from 'eslint-plugin-n';
 import { hasTypescript, hasTypeModule } from './utils.js';
 
-
 import babelParser from '@babel/eslint-parser/experimental-worker';
 
 /**
@@ -193,6 +192,17 @@ export function official(root) {
             ...globals.node,
           },
         },
+
+        rules: {
+          ...n.configs['flat/recommended-script'].rules,
+          'n/no-unsupported-features/node-builtins': [
+            'error',
+            {
+              version: process.version,
+              ignores: [],
+            },
+          ],
+        },
       },
       /**
        * ESM node files
@@ -201,7 +211,13 @@ export function official(root) {
       {
         ...n.configs['flat/recommended-module'],
         name: 'ember-eslint:node/esm',
-        files: ['**/*.mjs', 'config/**/*', '.template-lintrc.js', '*.js'],
+        files: [
+          '**/*.mjs',
+          'config/**/*',
+          '.template-lintrc.js',
+          '*.js',
+          '*.mjs',
+        ],
         plugins: {
           n,
         },
@@ -213,6 +229,16 @@ export function official(root) {
           globals: {
             ...globals.node,
           },
+        },
+        rules: {
+          ...n.configs['flat/recommended-module'].rules,
+          'n/no-unsupported-features/node-builtins': [
+            'error',
+            {
+              version: process.version,
+              ignores: [],
+            },
+          ],
         },
       },
       /**
