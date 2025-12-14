@@ -1,18 +1,18 @@
 {
   "solution": {
     "ember-eslint": {
-      "impact": "minor",
-      "oldVersion": "0.5.0",
-      "newVersion": "0.6.0",
+      "impact": "patch",
+      "oldVersion": "0.6.0",
+      "newVersion": "0.6.1",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2025-12-11)\n\n* ember-eslint 0.6.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-eslint`\n  * [#30](https://github.com/NullVoxPopuli/ember-eslint/pull/30) Update deps and sync with blueprint ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#28](https://github.com/NullVoxPopuli/ember-eslint/pull/28) Add names to all configs, even ones not provided by us ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2025-12-14)\n\n* ember-eslint 0.6.1 (patch)\n\n#### :bug: Bug Fix\n* `ember-eslint`\n  * [#31](https://github.com/NullVoxPopuli/ember-eslint/pull/31) Fix mjs and node version ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
 }
