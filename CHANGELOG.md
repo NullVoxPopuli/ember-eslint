@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-12-14)
+
+* ember-eslint 0.6.1 (patch)
+
+#### :bug: Bug Fix
+* `ember-eslint`
+  * [#31](https://github.com/NullVoxPopuli/ember-eslint/pull/31) Fix mjs and node version ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-12-11)
 
 * ember-eslint 0.6.0 (minor)
