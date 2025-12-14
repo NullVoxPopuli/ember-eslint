@@ -2,6 +2,17 @@
 
 ## Release (2025-12-14)
 
+* ember-eslint 0.6.2 (patch)
+
+#### :bug: Bug Fix
+* `ember-eslint`
+  * [#33](https://github.com/NullVoxPopuli/ember-eslint/pull/33) Be more specific about type=module node behavior ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+## Release (2025-12-14)
+
 * ember-eslint 0.6.1 (patch)
 
 #### :bug: Bug Fix
