@@ -22,6 +22,8 @@ jobs:
 
     steps:
       - uses: wyvox/action@v2
+        with:
+          node-version: 24
       - run: pnpm eslint --fix .
         working-directory: ${{ matrix.dir }}
       - run: pnpm eslint  .
