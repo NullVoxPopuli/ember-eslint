@@ -1,5 +1,21 @@
 # Changelog
 
+## Release (2026-05-17)
+
+* ember-eslint 0.7.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-eslint`
+  * [#37](https://github.com/NullVoxPopuli/ember-eslint/pull/37) Update deps (includes eslint-plugin-ember 12 -> 13) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#36](https://github.com/NullVoxPopuli/ember-eslint/pull/36) Add SSG ignores ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :bug: Bug Fix
+* `ember-eslint`
+  * [#33](https://github.com/NullVoxPopuli/ember-eslint/pull/33) Be more specific about type=module node behavior ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2025-12-14)
 
 * ember-eslint 0.6.1 (patch)
