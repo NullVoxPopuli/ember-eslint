@@ -40,6 +40,7 @@ export function official(root) {
       {
         name: 'ember-eslint:ignores',
         ignores: [
+          '.ssg-tmp/',
           'dist/',
           'dist-*/',
           'declarations/',
