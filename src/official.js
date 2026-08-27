@@ -10,7 +10,7 @@ import qunit from 'eslint-plugin-qunit';
 import n from 'eslint-plugin-n';
 import { hasTypescript, hasTypeModule } from './utils.js';
 
-import babelParser from '@babel/eslint-parser/experimental-worker';
+import babelParser from '@babel/eslint-parser';
 
 /**
  * @param {string} root the directory of the eslint config file. can be import.meta.dirname

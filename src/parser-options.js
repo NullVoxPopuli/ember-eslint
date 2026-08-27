@@ -8,6 +8,9 @@ export function esm(root) {
       ? {
           ecmaFeatures: { modules: true },
           ecmaVersion: 'latest',
+          babelOptions: {
+            cwd: root,
+          },
         }
       : {
           ecmaFeatures: { modules: true },
