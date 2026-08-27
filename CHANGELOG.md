@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2026-08-27)
+
+* ember-eslint 1.0.0 (major)
+
+#### :boom: Breaking Change
+* `ember-eslint`
+  * [#40](https://github.com/NullVoxPopuli/ember-eslint/pull/40) Update eslint (and @eslint/js, @babel/eslint-parser) ([@tcjr](https://github.com/tcjr))
+
+#### :rocket: Enhancement
+* `ember-eslint`
+  * [#40](https://github.com/NullVoxPopuli/ember-eslint/pull/40) Update eslint (and @eslint/js, @babel/eslint-parser) ([@tcjr](https://github.com/tcjr))
+
+#### Committers: 1
+- Tom Carter ([@tcjr](https://github.com/tcjr))
+
 ## Release (2026-05-17)
 
 * ember-eslint 0.7.0 (minor)
