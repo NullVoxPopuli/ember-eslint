@@ -1,22 +1,22 @@
 {
   "solution": {
     "ember-eslint": {
-      "impact": "minor",
-      "oldVersion": "0.6.1",
-      "newVersion": "0.7.0",
+      "impact": "major",
+      "oldVersion": "0.7.0",
+      "newVersion": "1.0.0",
       "tagName": "latest",
       "constraints": [
         {
-          "impact": "minor",
-          "reason": "Appears in changelog section :rocket: Enhancement"
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
         },
         {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2026-05-17)\n\n* ember-eslint 0.7.0 (minor)\n\n#### :rocket: Enhancement\n* `ember-eslint`\n  * [#37](https://github.com/NullVoxPopuli/ember-eslint/pull/37) Update deps (includes eslint-plugin-ember 12 -> 13) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n  * [#36](https://github.com/NullVoxPopuli/ember-eslint/pull/36) Add SSG ignores ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :bug: Bug Fix\n* `ember-eslint`\n  * [#33](https://github.com/NullVoxPopuli/ember-eslint/pull/33) Be more specific about type=module node behavior ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "## Release (2026-08-27)\n\n* ember-eslint 1.0.0 (major)\n\n#### :boom: Breaking Change\n* `ember-eslint`\n  * [#40](https://github.com/NullVoxPopuli/ember-eslint/pull/40) Update eslint (and @eslint/js, @babel/eslint-parser) ([@tcjr](https://github.com/tcjr))\n\n#### :rocket: Enhancement\n* `ember-eslint`\n  * [#40](https://github.com/NullVoxPopuli/ember-eslint/pull/40) Update eslint (and @eslint/js, @babel/eslint-parser) ([@tcjr](https://github.com/tcjr))\n\n#### Committers: 1\n- Tom Carter ([@tcjr](https://github.com/tcjr))\n"
 }
